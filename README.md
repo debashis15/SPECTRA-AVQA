@@ -3,8 +3,7 @@
 Audio-Visual Question Answering model with **TEMA** (Transformer-based Encoding
 for Modality Adaptation) and a **3-stage MS-CMAT** (Multi-Stage Cross-Modality
 Attention Transformer) head. CLIP supplies visual and question features; VGGish
-supplies audio features. The architecture follows the diagram you provided and
-borrows data / feature-extraction conventions from [MUSIC-AVQA] and [TSPM].
+supplies audio features. This work borrows data / feature-extraction conventions from [MUSIC-AVQA] and [TSPM].
 
 [MUSIC-AVQA]: https://github.com/GeWu-Lab/MUSIC-AVQA
 [TSPM]:       https://github.com/GeWu-Lab/TSPM
