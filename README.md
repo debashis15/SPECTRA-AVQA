@@ -38,7 +38,7 @@ spectra_avqa/
 └── requirements.txt
 ```
 
-## Model overview (matches the figure)
+## Model overview
 
 1. **Feature Embedding** – CLIP ViT-L/14 for frames **and** questions; VGGish for audio. All *frozen*.
 2. **Pre-Processing (`TempTMP`)** – median-pool along time, then keep the top-k frames whose cosine similarity to the (global) question embedding is highest (temporal order preserved). Applied to both V and A.
