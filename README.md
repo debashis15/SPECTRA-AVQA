@@ -4,7 +4,7 @@
 
 ### SPECTRA-AVQA-Net: Sparse Perceptual Enhancement with Cross-Modal Transformation for Audio-Visual Question Answering
 
-[![Paper](https://img.shields.io/badge/Paper-Under_Review_IEEE_TCSS-red)](#citation)
+[![Paper](https://img.shields.io/badge/Paper-Accepted at_IEEE_TCSS-red)](#citation)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)](https://pytorch.org/)
