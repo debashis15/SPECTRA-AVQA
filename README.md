@@ -2,7 +2,7 @@
 
 # 🎵 SPECTRA-AVQA
 
-### **S**parse-attention **P**rogressive **E**ncoding with **C**ross-modal **T**ransformer **R**easoning and **A**daptation for **A**udio-**V**isual **Q**uestion **A**nswering
+### SPECTRA-AVQA-Net: Sparse Perceptual Enhancement with Cross-Modal Transformation for Audio-Visual Question Answering
 
 [![Paper](https://img.shields.io/badge/Paper-Under_Review_IEEE_TCSS-red)](#citation)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
