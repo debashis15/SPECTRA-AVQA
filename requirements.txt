@@ -1,0 +1,18 @@
+torch>=1.13
+torchvision>=0.14
+numpy>=1.23
+tqdm>=4.64
+pyyaml>=6.0
+pillow>=9.0
+
+# -- feature extraction --
+transformers>=4.30          # CLIP image + text
+moviepy>=1.0.3              # audio extraction from video
+soundfile>=0.12             # VGGish WAV loader
+resampy>=0.4                # VGGish resampling
+# torchvggish: install from source
+# pip install git+https://github.com/harritaylor/torchvggish
+
+# -- nice-to-have --
+tensorboardX>=2.6
+scikit-learn>=1.2
