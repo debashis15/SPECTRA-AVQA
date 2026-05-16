@@ -1,0 +1,74 @@
+# ================================================================
+# Spectra-AVQA: Configuration file
+# ================================================================
+# This config centralises every path, hyper-parameter and model
+# dimension used by the Spectra-AVQA pipeline.  Override on the CLI:
+#   python main_train.py --config configs/config.yaml --lr 5e-5
+# ================================================================
+
+project:
+  name: "Spectra-AVQA"
+  seed: 42
+  device: "cuda"
+
+# ---------------- Data paths ----------------
+paths:
+  # Raw inputs
+  video_dir:      "./data/video"          # raw .mp4 files
+  frame_dir:      "./data/frames"         # extracted frames (per-second)
+  audio_dir:      "./data/audio"          # extracted .wav files
+  json_dir:       "./data/json"           # AVQA annotation JSONs
+  # Extracted features
+  clip_frame_dir: "./data/feats/clip_visual_frame"   # (T, 768) global CLIP frame
+  clip_patch_dir: "./data/feats/clip_visual_patch"   # (T, P, 768) patch tokens
+  vggish_dir:     "./data/feats/vggish_audio"        # (T, 128) VGGish
+  qst_feat_dir:   "./data/feats/clip_question"       # (77, 768) token / (768,) global
+  qap_feat_dir:   "./data/feats/clip_qa_prompt"      # QA-prompt features (optional)
+  # Outputs
+  ckpt_dir:       "./models"
+  log_dir:        "./logs"
+  result_dir:     "./results"
+
+# ---------------- Dataset ----------------
+dataset:
+  train_json: "./data/json/avqa-train.json"
+  val_json:   "./data/json/avqa-val.json"
+  test_json:  "./data/json/avqa-test.json"
+  answer_vocab: "./data/json/answer_vocab.json"   # built from train set
+  num_frames:  60      # T  – frames per clip after uniform sampling
+  top_k:       10      # Tʹ – kept by Temporal Top-k Median Pooling
+  num_patches: 50      # P  – CLIP patch tokens per frame (ViT-L/14 = 256, we sub-sample)
+  max_q_len:   77      # CLIP text context length
+
+# ---------------- Model dims ----------------
+model:
+  d_model:      512    # common projection dim (d in the diagram)
+  n_heads:      8
+  n_layers:     2      # per TEMA block
+  ffn_mult:     4      # FFN expansion ratio
+  dropout:      0.1
+  sra_window:   8      # Sparse-Range-Aware window size (local attention span)
+  sra_global:   2      # global tokens per head
+  ms_ffn_kernels: [1, 3, 5]   # Multi-Scale FFN kernel sizes
+
+  # Encoder input dims
+  clip_dim:    768     # CLIP ViT-L/14 output
+  vggish_dim:  128     # VGGish output
+
+# ---------------- Training ----------------
+train:
+  batch_size:  64
+  epochs:      30
+  lr:          1.0e-4
+  weight_decay: 1.0e-4
+  warmup_epochs: 2
+  num_workers: 8
+  grad_clip:   1.0
+  log_every:   50
+  save_every:  1        # epochs
+  amp:         true     # mixed-precision
+
+# ---------------- Test ----------------
+test:
+  batch_size: 1
+  ckpt:       "./models/best.pt"
