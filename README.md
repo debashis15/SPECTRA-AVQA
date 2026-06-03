@@ -398,14 +398,16 @@ We also thank the authors of LAVISH, DG-SCT, PSTP-Net, Amuse, QA-TIGER, and QSTa
 If you find this repository or the benchmark comparison **helpful in your research**, please consider citing our paper:
 
 ```bibtex
-@article{spectra_avqa_2025,
-  title   = {SPECTRA-AVQA: Sparse-Region Attention and Multi-Stage Cross-Modality
-             Transformer for Music Audio-Visual Question Answering},
-  author  = {<Author List>},
-  journal = {IEEE Transactions on Computational Social Systems (Under Review)},
-  year    = {2025},
-  note    = {Manuscript ID: TCSS-2025-07-1381.R2}
-}
+@ARTICLE{11547229,
+  author={Das, Debashis and Maji, Suman Kumar},
+  journal={IEEE Transactions on Computational Social Systems}, 
+  title={SPECTRA-AVQA-Net: Sparse Perceptual Enhancement With Cross-Modal Transformation for Audio–Visual Question Answering}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={1-14},
+  keywords={Visualization;Modeling;Cognition;Cognitive systems;Modules (abstract algebra);Accuracy;Distance measurement;Transformers;Question answering (information retrieval);Windows;Audio–visual question answering (AVQA);cross-modal;multimodal representation;sparse attention;semantic alignment},
+  doi={10.1109/TCSS.2026.3694468}}
 ```
 
 > 💡 *Please also cite the original MUSIC-AVQA paper and any baselines referenced in the comparison tables above when reporting results from this codebase.*
