@@ -418,6 +418,6 @@ If you find this repository or the benchmark comparison **helpful in your resear
 
 ### ⭐ If you found this page helpful, please consider citing our paper and starring the repository!
 
-**Made with ❤️ for the Music AI community**
+**Made with ❤️ for the World AI community**
 
 </div>
