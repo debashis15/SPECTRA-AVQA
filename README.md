@@ -317,7 +317,7 @@ The tables below place **Spectra-AVQA** in the broader landscape of Music AVQA m
 | QA-TIGER   | CVPR 2025    | 84.86 | 67.85 | 78.58 | 83.96 | 86.29 | 85.14 | 83.10 | 78.58 | 72.50 | 63.94 | 69.59 | 73.74 | 77.62 |
 | QSTar      | arXiv 2026   | 85.64 | 72.05 | 80.63 | 83.46 | 84.90 | 84.17 | 83.81 | 79.76 | 72.72 | 70.03 | 72.38 | 75.98 | 78.98 |
 | AV-Master  | arXiv 2025   | –     | –     | 79.95 | –     | –     | 86.58 | –     | –     | –     | –     | –     | 74.22 | 78.51 |
-| **Spectra-AVQA (This Work)** | *IEEE TCSS* | — | — | — | — | — | — | — | — | — | — | — | — | — |
+| **Spectra-AVQA (This Work)** | *IEEE TCSS ( 2026 )* | 85.12 | 72.45 | 79.03 | 81.68 | 85.13 | 84.33 | 84.82 | 77.69 | 74.74 | 66.85 | 72.44 | 74.83 | 77.09 |
 
 > 📝 *Spectra-AVQA results are pending official publication; this README will be updated upon acceptance at IEEE TCSS.*
 
